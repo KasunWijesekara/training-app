@@ -66,4 +66,32 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
+
+    public function index()
+    {
+        $this->viewBuilder()->layout('frontend');
+        $this->set('title', 'Home Page');
+        $this->set('body', 'home');
+    }
+
+    public function about()
+    {
+        $this->viewBuilder()->layout('frontend');
+        $this->set('title', 'About Page');
+        $this->set('body', 'home');
+    }
+
+    public function programs()
+    {
+        $this->viewBuilder()->layout('frontend');
+        $this->set('title', 'Programs Page');
+        $this->set('body', 'home');
+    }
+
+    public function contact()
+    {
+        $this->viewBuilder()->layout('frontend');
+        $this->set('title', 'Contact Page');
+        $this->set('body', 'home');
+    }
 }

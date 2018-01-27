@@ -88,6 +88,14 @@ class PagesController extends AppController
         $this->set('body', 'home');
     }
 
+    public function programSingle($id = null)
+    {
+        $this->viewBuilder()->layout('singlelayout');
+        $this->set('title', 'Programs Single');
+        $this->set('body', 'portfolio');
+        
+    }
+
     public function contact()
     {
         $this->viewBuilder()->layout('frontend');

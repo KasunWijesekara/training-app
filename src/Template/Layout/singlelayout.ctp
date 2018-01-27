@@ -7,22 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
 
-    <script src="js/jquery-3.2.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/loader.js"></script>
-    <script src="js/holder.min.js"></script>
+    <script src="/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/loader.js"></script>
+    <script src="/js/holder.min.js"></script>
 </head>
 <body>
     <!-- Loader  -->
     <!-- <div id="loader">
         <div class="loader-container">
             <h3 class="loader-back-text">
-                <img style="width: 235px;" src="img/logo.png" alt="" class="loader">
-            </h3>
+                <img style="width: 235px;" src="img/logo.png" alt="" class="loader"></h3>
             </div>
         </div> -->
         <!-- Loader  -->    

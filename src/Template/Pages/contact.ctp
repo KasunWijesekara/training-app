@@ -39,14 +39,14 @@
   </div>
 
   <div class="container text-right">
-      <form>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Name">
-          </div>
-          <div class="form-group col-md-6">
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Email">
-          </div>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Name">
+        </div>
+        <div class="form-group col-md-6">
+          <input type="password" class="form-control" id="inputPassword4" placeholder="Email">
+        </div>
 
         <div class="form-group col-md-6">
           <input type="text" class="form-control" id="inputAddress" placeholder="Address">
@@ -55,9 +55,13 @@
         <div class="form-group col-md-6">
           <input type="text" class="form-control" id="inputAddress2" placeholder="Telephone">
         </div>
+        <div class="form-group col-md-12">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Sign in</button>
-      </form>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
   </div>
 
 

@@ -18,6 +18,7 @@
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">Download</button>
+                  <a class="btn btn-sm btn-outline-secondary" href="/program-single/*">More Information</a>
                 </div>
               </div>
             </div>

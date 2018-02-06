@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
 
 /**
  * Contacts Controller
@@ -24,6 +25,25 @@ class ContactsController extends AppController
 
         $this->set(compact('contacts'));
     }
+
+    public function addClient()
+    {
+       $this->viewBuilder()->layout(false);
+       $contact = $this->Contacts->newEntity();
+       if ($this->request->is('post')) {
+           $contact = $this->Contacts->patchEntity($contact, $this->request->data);
+
+           if ($this->Contacts->save($contact)) {
+               $this->Flash->success(__('Your contact has been sent. Our team will get back to you shortly!'));
+               return $this->redirect( '/contact-us' );
+           } else {
+            $this->Flash->error(__('The contact could not be saved. Please try again later.'));
+            return $this->redirect( '/contact-us' );
+        }
+        $this->Flash->error(__('Error. Something went wrong! Try again later.'));
+        return $this->redirect( '/contact-us' );
+    }
+}
 
     /**
      * View method

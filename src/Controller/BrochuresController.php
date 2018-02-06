@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
 
 /**
  * Brochures Controller
@@ -49,21 +50,6 @@ class BrochuresController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    // public function add()
-    // {
-    //     $brochure = $this->Brochures->newEntity();
-    //     if ($this->request->is('post')) {
-    //         $brochure = $this->Brochures->patchEntity($brochure, $this->request->getData());
-    //         if ($this->Brochures->save($brochure)) {
-    //             $this->Flash->success(__('The brochure has been saved.'));
-
-    //             return $this->redirect(['action' => 'index']);
-    //         }
-    //         $this->Flash->error(__('The brochure could not be saved. Please, try again.'));
-    //     }
-    //     $courses = $this->Brochures->Courses->find('list', ['limit' => 200]);
-    //     $this->set(compact('brochure', 'courses'));
-    // }
 
     public function add()
     {
@@ -112,23 +98,6 @@ class BrochuresController extends AppController
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    // public function edit($id = null)
-    // {
-    //     $brochure = $this->Brochures->get($id, [
-    //         'contain' => []
-    //     ]);
-    //     if ($this->request->is(['patch', 'post', 'put'])) {
-    //         $brochure = $this->Brochures->patchEntity($brochure, $this->request->getData());
-    //         if ($this->Brochures->save($brochure)) {
-    //             $this->Flash->success(__('The brochure has been saved.'));
-
-    //             return $this->redirect(['action' => 'index']);
-    //         }
-    //         $this->Flash->error(__('The brochure could not be saved. Please, try again.'));
-    //     }
-    //     $courses = $this->Brochures->Courses->find('list', ['limit' => 200]);
-    //     $this->set(compact('brochure', 'courses'));
-    // }
 
     public function edit($id = null)
     {

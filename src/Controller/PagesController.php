@@ -72,6 +72,18 @@ class PagesController extends AppController
         $this->viewBuilder()->layout('frontend');
         $this->set('title', 'Home Page');
         $this->set('body', 'home');
+
+        $this->loadModel('Onesliders');
+        $opts1['conditions'] =  array('Onesliders.status' => 1);
+        $oneslider = $this->Onesliders->find('all',$opts1);
+        $this->set('oneslider', $oneslider);
+        $this->set('_serialize', ['oneslider']);
+
+        $this->loadModel('Twosliders');
+        $opts1['conditions'] =  array('Twosliders.status' => 1);
+        $twoslider = $this->Twosliders->find('all',$opts1);
+        $this->set('twoslider', $twoslider);
+        $this->set('_serialize', ['twoslider']);
     }
 
     public function about()

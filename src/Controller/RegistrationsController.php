@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
 
 /**
  * Registrations Controller
@@ -26,6 +27,25 @@ class RegistrationsController extends AppController
         $registrations = $this->paginate($this->Registrations);
 
         $this->set(compact('registrations'));
+    }
+
+    public function addRegistrations()
+    {
+       $this->viewBuilder()->layout(false);
+       $registration = $this->Registrations->newEntity();
+       if ($this->request->is('post')) {
+           $registration = $this->Registrations->patchEntity($registration, $this->request->data);
+
+           if ($this->Registrations->save($registration)) {
+               $this->Flash->success(__('Your registration has been sent. Our team will get back to you shortly!'));
+               return $this->redirect( '/programs' );
+           } else {
+            $this->Flash->error(__('The contact could not be saved. Please try again later.'));
+            return $this->redirect( '/programs' );
+        }
+        $this->Flash->error(__('Error. Something went wrong! Try again later.'));
+        return $this->redirect( '/programs' );
+    }
     }
 
     /**

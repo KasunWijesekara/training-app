@@ -23,16 +23,17 @@
     </ul>
 </nav>
 <div class="courses form large-9 medium-8 columns content">
-    <?= $this->Form->create($course) ?>
+    <?= $this->Form->create($course, ['enctype' => 'multipart/form-data']) ?>
     <fieldset>
         <legend><?= __('Edit Course') ?></legend>
         <?php
             echo $this->Form->control('title');
             echo $this->Form->control('description');
-            echo $this->Form->control('mainimage');
+            echo $this->Form->input('mainimage', ['type' => 'file', 'accept'=> '.png, .jpg, .jpeg']);
             echo $this->Form->control('status');
         ?>
     </fieldset>
+    <input type="hidden" name="blog_imgold" value="<?php echo $course->mainimage; ?>">
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>

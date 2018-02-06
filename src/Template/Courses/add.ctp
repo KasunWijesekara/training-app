@@ -17,13 +17,13 @@
     </ul>
 </nav>
 <div class="courses form large-9 medium-8 columns content">
-    <?= $this->Form->create($course) ?>
+    <?= $this->Form->create($course, ['enctype' => 'multipart/form-data']) ?>
     <fieldset>
         <legend><?= __('Add Course') ?></legend>
         <?php
             echo $this->Form->control('title');
             echo $this->Form->control('description');
-            echo $this->Form->control('mainimage');
+            echo $this->Form->input('mainimage', ['type' => 'file', 'accept'=> '.png, .jpg, .jpeg']);
             echo $this->Form->control('status');
         ?>
     </fieldset>

@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
 
 /**
  * Quotations Controller
@@ -27,6 +28,25 @@ class QuotationsController extends AppController
 
         $this->set(compact('quotations'));
     }
+
+    public function addQuotations()
+    {
+     $this->viewBuilder()->layout(false);
+     $quotation = $this->Quotations->newEntity();
+     if ($this->request->is('post')) {
+       $quotation = $this->Quotations->patchEntity($quotation, $this->request->data);
+
+       if ($this->Quotations->save($quotation)) {
+           $this->Flash->success(__('Your quotation has been sent. Our team will get back to you shortly!'));
+             return $this->redirect( '/programs' );
+         } else {
+            $this->Flash->error(__('The contact could not be saved. Please try again later.'));
+            return $this->redirect( '/programs' );
+        }
+        $this->Flash->error(__('Error. Something went wrong! Try again later.'));
+        return $this->redirect( '/programs' );
+    }
+}
 
     /**
      * View method

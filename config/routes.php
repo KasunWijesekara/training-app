@@ -56,6 +56,10 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/programs', ['controller' => 'Pages', 'action' => 'programs'], ['routeClass' => 'DashedRoute']);
     $routes->connect('/program-single/*', ['controller' => 'Pages', 'action' => 'programSingle'], ['routeClass' => 'DashedRoute']);
     $routes->connect('/contact-us', ['controller' => 'Pages', 'action' => 'contact'], ['routeClass' => 'DashedRoute']);
+
+    $routes->connect('/add-contact', ['controller' => 'Contacts', 'action' => 'addClient'], ['routeClass' => 'DashedRoute']);
+    $routes->connect('/add-registration', ['controller' => 'Registrations', 'action' => 'addRegistrations'], ['routeClass' => 'DashedRoute']);
+    $routes->connect('/add-quotation', ['controller' => 'Quotations', 'action' => 'addQuotations'], ['routeClass' => 'DashedRoute']);
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */

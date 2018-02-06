@@ -7,54 +7,33 @@
 
   <div class="album py-5 bg-light">
     <div class="container">
-
       <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-            <div class="card-body">
-              <h6>Title</h6>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Download</button>
-                  <a class="btn btn-sm btn-outline-secondary" href="/program-single/*">More Information</a>
+        <?php 
+        if (!empty($courseitem)) {  
+          foreach ($courseitem as $courses): ?>
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              <img class="card-img-top" src="<?php echo ($courses->mainimage); ?>" alt="Card image cap">
+              <div class="card-body">
+                <h6><?php echo ($courses->title); ?></h6>
+                <p class="card-text">
+                  <?php echo ($courses->description); ?>
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a class="btn btn-sm btn-outline-secondary" href="<?= h($courses->_matchingData['Brochures']['pdffile']) ?>" download>Download</a>
+                    <a class="btn btn-sm btn-outline-secondary" href="/program-single/<?php echo ($courses->id); ?>">More Information</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-            <div class="card-body">
-              <h6>Title</h6>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Download</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-            <div class="card-body">
-              <h6>Title</h6>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Download</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
+          <?php 
+        endforeach; 
+      } 
+      ?>
     </div>
   </div>
+</div>
 
 </main>

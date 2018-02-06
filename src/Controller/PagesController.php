@@ -98,6 +98,19 @@ class PagesController extends AppController
         $this->viewBuilder()->layout('frontend');
         $this->set('title', 'Programs Page');
         $this->set('body', 'home');
+
+        $this->loadModel('Brochures');
+        $this->loadModel('Courses');
+
+        $courseitem = $this->Courses->find('all')
+        ->select(['Courses.id' , 'Courses.title' , 'Courses.description' , 'Courses.mainimage' , 
+            'Courses.created'  ,'Courses.status' , 'Brochures.id' , 'Brochures.course_id' , 'Brochures.pdffile'])
+        ->leftJoinWith('Brochures')
+        ->where(['Courses.status' => 1])
+        ->toArray();    
+
+        $this->set('courseitem', $courseitem);
+        $this->set('_serialize', ['courseitem']);
     }
 
     public function programSingle($id = null)
@@ -105,6 +118,21 @@ class PagesController extends AppController
         $this->viewBuilder()->layout('singlelayout');
         $this->set('title', 'Programs Single');
         $this->set('body', 'portfolio');
+
+        $this->loadModel('Brochures');
+        $this->loadModel('Courses');
+
+        $opts15['conditions'] =  array('Courses.id' => $id);
+        $courseitem = $this->Courses->find('all',$opts15)
+        ->select(['Courses.id' , 'Courses.title' , 'Courses.description' , 'Courses.mainimage' , 
+            'Courses.created'  ,'Courses.status' , 'Brochures.id' , 'Brochures.course_id' , 'Brochures.pdffile'])
+        ->leftJoinWith('Brochures')
+        ->where(['Courses.status' => 1])
+        ->toArray();    
+
+        $this->set('courseitem', $courseitem);
+        $this->set('_serialize', ['courseitem']);
+
         
     }
 

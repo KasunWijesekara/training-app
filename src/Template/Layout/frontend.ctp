@@ -35,7 +35,7 @@
             <a class="p-2 text-dark" href="/programs">Programs</a>
             <a class="p-2 text-dark" href="/contact-us">Contact</a>
         </nav>
-        <a class="btn btn-outline-primary" href="#">Sign up</a>
+        <!-- <a class="btn btn-outline-primary" href="#">Sign up</a> -->
     </div>
 
     <?php echo $this->fetch('content'); ?>

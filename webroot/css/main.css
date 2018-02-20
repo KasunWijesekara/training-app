@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+}
+
 #loader {
   overflow-x: hidden;
   overflow-y: hidden;
@@ -52,7 +58,7 @@ html {
 /* Padding below the footer and lighter body text */
 
 body {
-  padding-bottom: 3rem;
+  /*padding-bottom: 3rem;*/
   color: #5a5a5a;
 }
 
@@ -146,4 +152,25 @@ body {
 }
 #contactarea {
   padding-top: 5rem;
+}
+
+#navigation a:hover{
+  text-decoration: none;
+  background-color: #4d4966;
+  color: #ffffff!important;
+}
+#navigation a {
+  padding: 3rem 1rem;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  color: #ffffff!important;
+}
+#mainnav {
+  background-color: #606061!important;
+  border-bottom: 1px solid #606061!important;
+}
+#footermain {
+  background-color: red;
 }

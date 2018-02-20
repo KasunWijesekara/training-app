@@ -8,7 +8,7 @@
 
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
 
     <script src="/js/jquery-3.2.1.slim.min.js"></script>
     <script src="/js/popper.min.js"></script>
@@ -27,8 +27,8 @@
         <!-- Loader  -->    
 
         <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow nomarg">
-          <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
-          <nav class="my-2 my-md-0 mr-md-3">
+          <img src="/img/logo.png" class="my-0 mr-md-auto img-responsive">
+          <nav class="my-2 my-md-0 mr-md-3" id="navigation">
             <a class="p-2 text-dark" href="/">Home</a>
             <a class="p-2 text-dark" href="/about">About</a>
             <a class="p-2 text-dark" href="/programs">Programs</a>
@@ -43,7 +43,7 @@
         <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="row">
           <div class="col-12 col-md">
-            <img class="mb-2" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+            <img src="/img/footerlogo.png" height="150" class="mb-2 img-responsive">
             <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
           </div>
           <div class="col-6 col-md">

@@ -60,6 +60,11 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/add-contact', ['controller' => 'Contacts', 'action' => 'addClient'], ['routeClass' => 'DashedRoute']);
     $routes->connect('/add-registration', ['controller' => 'Registrations', 'action' => 'addRegistrations'], ['routeClass' => 'DashedRoute']);
     $routes->connect('/add-quotation', ['controller' => 'Quotations', 'action' => 'addQuotations'], ['routeClass' => 'DashedRoute']);
+
+     //user auth routes
+    $routes->connect('/login', ['controller' => 'Users', 'action' => 'login'], ['routeClass' => 'DashedRoute']);
+    $routes->connect('/logout', ['controller' => 'Users', 'action' => 'logout'], ['routeClass' => 'DashedRoute']);
+
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */

@@ -3,7 +3,9 @@
 body {
   font-family: 'Titillium Web', sans-serif;
 }
-
+ #logincontainer{
+    padding:220px 100px 300px 100px;
+  }
 #loader {
   overflow-x: hidden;
   overflow-y: hidden;

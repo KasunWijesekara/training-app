@@ -26,7 +26,7 @@
             <?php foreach ($onesliders as $oneslider): ?>
             <tr>
                 <td><?= $this->Number->format($oneslider->id) ?></td>
-                <td><?= h($oneslider->image) ?></td>
+                <td><?php echo $this->Html->image(trim($oneslider->image),array('align'=>'absbottom','style'=>'max-height:100px')) ?>
                 <td><?= h($oneslider->status) ?></td>
                 <td><?= h($oneslider->created) ?></td>
                 <td class="actions">

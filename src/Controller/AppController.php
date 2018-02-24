@@ -16,6 +16,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Cake\Core\Configure;
 
 /**
  * Application Controller
@@ -26,7 +27,44 @@ use Cake\Event\Event;
  * @link https://book.cakephp.org/3.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller
-{
+{   
+    public function beforeFilter(Event $event)
+    {
+     $this->Auth->allow(['display']);
+ } 
+
+ public function initialize()
+ {
+    parent::initialize();
+
+    $this->loadComponent('RequestHandler');
+    $this->loadComponent('Flash');
+    $this->loadComponent('Auth', [
+        'authenticate' => [
+            'Form' => [
+                'fields' => [
+                    'username' => 'name',
+                    'password' => 'password'
+                ],
+                'scope' => [ 'status' => 1 ]
+            ]
+        ],
+             'authorize' => ['Controller'], // Added this line
+             'loginAction' => [
+                'controller' => 'Users',
+                'action' => 'login'
+            ],
+            'loginRedirect' => [
+                'controller' => 'Users',
+                'action' => 'index'
+            ],
+            'logoutRedirect' => [
+                'controller' => 'Pages',
+                'action' => 'Index',
+
+            ]
+        ]);
+}
 
     /**
      * Initialization hook method.
@@ -37,18 +75,23 @@ class AppController extends Controller
      *
      * @return void
      */
-    public function initialize()
+    
+    public function beforeRender(Event $event)
     {
-        parent::initialize();
-
-        $this->loadComponent('RequestHandler');
-        $this->loadComponent('Flash');
-
-        /*
-         * Enable the following components for recommended CakePHP security settings.
-         * see https://book.cakephp.org/3.0/en/controllers/components/security.html
-         */
-        //$this->loadComponent('Security');
-        //$this->loadComponent('Csrf');
+        if (!array_key_exists('_serialize', $this->viewVars) &&
+            in_array($this->response->type(), ['application/json', 'application/xml'])
+        ) {
+            $this->set('_serialize', true);
     }
+}
+
+public function isAuthorized($user)
+{
+    // Admin can access every action
+    if (isset($user['group_id']) && $user['group_id'] === 1) {
+        return true;
+    }
+    // Default deny
+    return false;
+}
 }

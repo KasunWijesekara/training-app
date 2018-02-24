@@ -32,7 +32,7 @@
                 <td><?= $this->Number->format($brochure->id) ?></td>
                 <td><?= $brochure->has('course') ? $this->Html->link($brochure->course->title, ['controller' => 'Courses', 'action' => 'view', $brochure->course->id]) : '' ?></td>
                 <td><?= h($brochure->title) ?></td>
-                <td><?= h($brochure->pdffile) ?></td>
+                <td><a href="<?= h($brochure->pdffile) ?>" download> Download </a></td>
                 <td><?= h($brochure->created) ?></td>
                 <td><?= h($brochure->status) ?></td>
                 <td class="actions">

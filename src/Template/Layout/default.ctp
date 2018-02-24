@@ -45,6 +45,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <li><a  href="/logout">Logout</a></li>
                 </ul>
             <ul class="left">
+                    <li><a  href="/users">Users</a></li>
+                    <li><a  href="/groups">Groups</a></li>
                     <li><a  href="/courses">Courses</a></li>
                     <li><a  href="/onesliders">Main Slider</a></li>
                     <li><a  href="/twosliders">Slider Secondary</a></li>

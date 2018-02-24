@@ -46,32 +46,30 @@
             <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
           </div>
           <div class="col-6 col-md">
-            <h5>Features</h5>
+            <h5>About</h5>
             <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Cool stuff</a></li>
-              <li><a class="text-muted" href="#">Random feature</a></li>
-              <li><a class="text-muted" href="#">Team feature</a></li>
-              <li><a class="text-muted" href="#">Stuff for developers</a></li>
-              <li><a class="text-muted" href="#">Another one</a></li>
-              <li><a class="text-muted" href="#">Last time</a></li>
+              <li><a class="text-muted" href="/about">About us</a></li>
+              <li><a class="text-muted" href="/about">Company Mission</a></li>
+              <li><a class="text-muted" href="/about">Company Vision</a></li>
+              <li><a class="text-muted" href="/about">Our Staff</a></li>
             </ul>
           </div>
           <div class="col-6 col-md">
             <h5>Resources</h5>
             <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Resource</a></li>
-              <li><a class="text-muted" href="#">Resource name</a></li>
-              <li><a class="text-muted" href="#">Another resource</a></li>
-              <li><a class="text-muted" href="#">Final resource</a></li>
+              <li><a class="text-muted" href="/programs">Programs Available</a></li>
+              <li><a class="text-muted" href="/programs">Training Material</a></li>
+              <li><a class="text-muted" href="/programs">Brouchures Available</a></li>
+              <li><a class="text-muted" href="/programs">More Information</a></li>
             </ul>
           </div>
           <div class="col-6 col-md">
-            <h5>About</h5>
+            <h5>Contact</h5>
             <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Team</a></li>
-              <li><a class="text-muted" href="#">Locations</a></li>
-              <li><a class="text-muted" href="#">Privacy</a></li>
-              <li><a class="text-muted" href="#">Terms</a></li>
+              <li><a class="text-muted" href="/contact-us">Company Location</a></li>
+              <li><a class="text-muted" href="/contact-us">Company Phone</a></li>
+              <li><a class="text-muted" href="/contact-us">Company Address</a></li>
+              <li><a class="text-muted" href="/contact-us">Company Email</a></li>
             </ul>
           </div>
         </div>

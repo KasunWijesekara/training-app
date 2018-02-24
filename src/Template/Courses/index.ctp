@@ -23,7 +23,7 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('description') ?></th>
+                <!-- <th scope="col"><?= $this->Paginator->sort('description') ?></th> -->
                 <th scope="col"><?= $this->Paginator->sort('mainimage') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('status') ?></th>
@@ -35,8 +35,8 @@
             <tr>
                 <td><?= $this->Number->format($course->id) ?></td>
                 <td><?= h($course->title) ?></td>
-                <td><?= h($course->description) ?></td>
-                <td><?= h($course->mainimage) ?></td>
+                <!-- <td><?= h($course->description) ?></td> -->
+                <td><?php echo $this->Html->image(trim($course->mainimage),array('align'=>'absbottom','style'=>'max-height:100px')) ?>
                 <td><?= h($course->created) ?></td>
                 <td><?= h($course->status) ?></td>
                 <td class="actions">

@@ -40,8 +40,10 @@
 
 
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-4">Pricing</h1>
-  <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
+  <h1 class="display-4">What we do</h1>
+  <p class="lead">
+    Lakmali Information Technology, known as LIT was founded in 2011 as an  Information/Systems Integrator of Information Communication Technology (ICT) solutions provider in Sri Lanka. Today LIT has extended the services to providing state-of-the-art technical training and certifications on all popular IT technologies available globally. 
+  </p>
 </div>
 
 <div class="container">

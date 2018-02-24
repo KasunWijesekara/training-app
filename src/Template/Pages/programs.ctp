@@ -8,7 +8,19 @@
   <div class="album py-5 bg-light">
     <div class="container">
       <div class="row">
-        <?php 
+        <?php     
+            function limit_text($text, $limit) {
+                if (str_word_count($text, 0) > $limit) {
+                    $words = str_word_count($text, 2);
+                    $pos = array_keys($words);
+                    $text = substr($text, 0, $pos[$limit]) . '...';
+                }
+                return $text;
+            }
+
+            if(!empty($error)){
+                echo $error;
+            }
         if (!empty($courseitem)) {  
           foreach ($courseitem as $courses): ?>
           <div class="col-md-4">
@@ -17,7 +29,7 @@
               <div class="card-body">
                 <h6><?php echo ($courses->title); ?></h6>
                 <p class="card-text">
-                  <?php echo ($courses->description); ?>
+                  <?php echo limit_text($courses->description, 20); ?>
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">

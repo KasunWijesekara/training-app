@@ -52,7 +52,7 @@ if (!empty($courseitem)) {
           <form method="post" action="/add-registration">
             <div class="form-group">
               <label for="formGroupExampleInput">Name</label>
-              <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Name">
+              <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Name" required>
             </div>
             <div class="form-group">
               <label for="formGroupExampleInput2">Address</label>

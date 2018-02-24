@@ -26,7 +26,7 @@
         </div> -->
         <!-- Loader  -->    
 
-        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow nomarg">
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow nomarg" id="mainnav">
           <img src="/img/logo.png" class="my-0 mr-md-auto img-responsive">
           <nav class="my-2 my-md-0 mr-md-3" id="navigation">
             <a class="p-2 text-dark" href="/">Home</a>

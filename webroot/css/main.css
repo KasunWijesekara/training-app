@@ -163,7 +163,7 @@ body {
   color: #ffffff!important;
 }
 #navigation a {
-  padding: 3rem 1rem;
+  padding: 2.6rem 1rem!important;
   -o-transition: .5s;
   -ms-transition: .5s;
   -moz-transition: .5s;

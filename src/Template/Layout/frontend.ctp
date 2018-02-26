@@ -30,7 +30,7 @@
           <img src="img/logo.png" class="my-0 mr-md-auto img-responsive">
           <nav class="my-2 my-md-0 mr-md-3" id="navigation">
             <a class="text-dark" href="/">Home</a>
-            <a class="text-dark" href="/about">About</a>
+            <a class="text-dark" href="/about-us">About</a>
             <a class="text-dark" href="/programs">Programs</a>
             <a class="text-dark" href="/contact-us">Contact</a>
         </nav>

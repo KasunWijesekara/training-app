@@ -11,6 +11,20 @@
                 LIT academy is facilitating Information Communication Technology (ICT) industry related training programs to build Skilled, Technology Professionals to fulfil ICT industry need. From the inception, LIT have offered technical courses covering VMware, Cisco and Microsoft, Best Practices trainings, Project Management trainings and numerous other technical courses that has successfully trained over 200+ ICT professionals in Sri Lanka. 
             </p>
         </div>
+
+
+        <div class="col-12" style="padding-top: 3rem;">
+            <img src="aboutpics/img1.jpg" class="img-fluid">
+        </div>
+        <div class="col-6" style="padding-top: 3rem;">
+            <img src="aboutpics/img4.png" class="img-fluid">
+        </div>
+        <div class="col-6" style="padding-top: 3rem;">
+            <img src="aboutpics/img3.jpg" class="img-fluid">
+        </div>
+        <div class="col-12 text-center" style="padding-top: 3rem;">
+            <img src="aboutpics/img2.jpg" class="img-fluid">
+        </div>
     </div>
 </div>
 

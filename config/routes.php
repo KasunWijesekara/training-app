@@ -52,7 +52,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     // $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'index'], ['routeClass' => 'DashedRoute']);
-    $routes->connect('/about', ['controller' => 'Pages', 'action' => 'about'], ['routeClass' => 'DashedRoute']);
+    $routes->connect('/about-us', ['controller' => 'Pages', 'action' => 'about'], ['routeClass' => 'DashedRoute']);
     $routes->connect('/programs', ['controller' => 'Pages', 'action' => 'programs'], ['routeClass' => 'DashedRoute']);
     $routes->connect('/program-single/*', ['controller' => 'Pages', 'action' => 'programSingle'], ['routeClass' => 'DashedRoute']);
     $routes->connect('/contact-us', ['controller' => 'Pages', 'action' => 'contact'], ['routeClass' => 'DashedRoute']);

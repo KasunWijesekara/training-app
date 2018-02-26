@@ -14,7 +14,7 @@
 </nav>
 <div class="registrations index large-9 medium-8 columns content">
     <h3><?= __('Registrations') ?></h3>
-    <table cellpadding="0" cellspacing="0">
+    <table id="example" cellpadding="0" cellspacing="0">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
@@ -30,21 +30,21 @@
         </thead>
         <tbody>
             <?php foreach ($registrations as $registration): ?>
-            <tr>
-                <td><?= $this->Number->format($registration->id) ?></td>
-                <td><?= h($registration->name) ?></td>
-                <td><?= h($registration->email) ?></td>
-                <td><?= h($registration->dob) ?></td>
-                <td><?= h($registration->phone) ?></td>
-                <td><?= h($registration->address) ?></td>
-                <td><?= $registration->has('course') ? $this->Html->link($registration->course->title, ['controller' => 'Courses', 'action' => 'view', $registration->course->id]) : '' ?></td>
-                <td><?= h($registration->created) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $registration->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $registration->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $registration->id], ['confirm' => __('Are you sure you want to delete # {0}?', $registration->id)]) ?>
-                </td>
-            </tr>
+                <tr>
+                    <td><?= $this->Number->format($registration->id) ?></td>
+                    <td><?= h($registration->name) ?></td>
+                    <td><?= h($registration->email) ?></td>
+                    <td><?= h($registration->dob) ?></td>
+                    <td><?= h($registration->phone) ?></td>
+                    <td><?= h($registration->address) ?></td>
+                    <td><?= $registration->has('course') ? $this->Html->link($registration->course->title, ['controller' => 'Courses', 'action' => 'view', $registration->course->id]) : '' ?></td>
+                    <td><?= h($registration->created) ?></td>
+                    <td class="actions">
+                        <?= $this->Html->link(__('View'), ['action' => 'view', $registration->id]) ?>
+                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $registration->id]) ?>
+                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $registration->id], ['confirm' => __('Are you sure you want to delete # {0}?', $registration->id)]) ?>
+                    </td>
+                </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
@@ -59,3 +59,15 @@
         <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
     </div>
 </div>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#example').DataTable( {
+            dom: 'Bfrtip',
+            buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
+        } );
+    } );
+</script>
